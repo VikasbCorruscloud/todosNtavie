@@ -7,20 +7,22 @@ const SubmitTodo = () => {
   const [description, setDescription] = useState("");
 
   return (
-    <View className="">
+    <>
       {/* Add Task Button */}
       <TouchableOpacity
         onPress={() => setShowForm(true)}
-        className="bg-[#4884AE] h-[48px] rounded-lg mx-4 my-3 flex items-center justify-center"
+        className="bg-[#4884AE] h-[48px] w-[360px] rounded-lg  my-3 "
       >
-        <Text className="text-[#FFFCFC] font-semibold">Add Task</Text>
+        <Text className="text-[#FFFCFC] text-center py-4 font-semibold">
+          Add Task
+        </Text>
       </TouchableOpacity>
 
       {/* Task Form */}
       {showForm && (
-        <View className="  ">
+        <View className=" ">
           <View className="absolute bottom-0 left-0 right-0">
-            <View className="bg-white p-6 rounded-t-xl w-full h-[400px]">
+            <View className="bg-white rounded-t-xl w-full h-[400px]">
               {/* Header */}
               <View className="flex-row justify-between items-center mb-4">
                 <Text className="text-xl font-semibold">New Task</Text>
@@ -40,7 +42,7 @@ const SubmitTodo = () => {
               <View className="gap-4">
                 {/* Title Input */}
                 <View>
-                  <Text className="text-lg font-medium mb-2">Title</Text>
+                  <Text className="text-lg font-medium mb-3">Title</Text>
                   <TextInput
                     value={title}
                     onChangeText={setTitle}
@@ -51,7 +53,7 @@ const SubmitTodo = () => {
 
                 {/* Description Input */}
                 <View>
-                  <Text className="text-lg font-medium mb-2">Description</Text>
+                  <Text className="text-lg font-medium mb-3">Description</Text>
                   <TextInput
                     value={description}
                     onChangeText={setDescription}
@@ -63,15 +65,17 @@ const SubmitTodo = () => {
                 </View>
 
                 {/* Submit Button */}
-                <TouchableOpacity className=" mt-6 bg-[#4884AE] h-[48px] rounded-lg flex items-center justify-center">
-                  <Text className="text-[#FFFCFC] font-semibold">Submit</Text>
+                <TouchableOpacity className="bg-[#4884AE] h-[48px] w-[360px] rounded-lg my-6 ">
+                  <Text className="text-[#FFFCFC] text-center py-4 font-semibold">
+                    Add Task
+                  </Text>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
         </View>
       )}
-    </View>
+    </>
   );
 };
 
