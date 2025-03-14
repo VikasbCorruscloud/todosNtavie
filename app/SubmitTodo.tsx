@@ -38,7 +38,7 @@ const SubmitTodo = () => {
                 </TouchableOpacity>
               </View>
 
-              {/* Inputs */}
+              {/* Inputs field */}
               <View className="gap-4">
                 {/* Title Input */}
                 <View>
